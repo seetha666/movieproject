@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/movies.css" %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" align="center">
+    <h1>Movies infermation</h1>
+    {% if list_movies%}
+    <table class="table">
+        <thead>
+            <th>rdate</th>
+            <th>moviename</th>
+            <th>hero</th>
+            <th>heroin</th>
+            <th>rating</th>
+        </thead>
+        {%for movie in list_movies%}
+        <tr>
+            <td>{{movie.rdate}}</td>
+            <td>{{movie.moviename}}</td>
+            <td>{{movie.hero}}</td>
+            <td>{{movie.heroin}}</td>
+            <td>{{movie.rating}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <p>No movie found</p>
+    {%endif%}
+    <a href="/">Home</a>
+</div>
+
+</body>
+</html>
