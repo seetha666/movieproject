@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from testapp.models import Movie
 from testapp.forms import MovieForm
 # Create your views here.
@@ -17,3 +17,8 @@ def add_movie_view(request):
             form.save()
         return index_view(request)
     return render(request,'testapp/addmovie.html',{'form':form})
+def delete_view(request,id):
+    movie=Movie.objects.get(id=id)
+    print(movie.id)
+    movie.delete()
+    return redirect('/')

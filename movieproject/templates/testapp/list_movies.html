@@ -18,6 +18,7 @@
             <th>hero</th>
             <th>heroin</th>
             <th>rating</th>
+            <th>Action</th>
         </thead>
         {%for movie in list_movies%}
         <tr>
@@ -26,6 +27,7 @@
             <td>{{movie.hero}}</td>
             <td>{{movie.heroin}}</td>
             <td>{{movie.rating}}</td>
+            <td><a href="/delete/{{movie.id}}/">Delete</a></td>
         </tr>
         {%endfor%}
     </table>
