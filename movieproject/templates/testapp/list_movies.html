@@ -27,13 +27,15 @@
             <td>{{movie.hero}}</td>
             <td>{{movie.heroin}}</td>
             <td>{{movie.rating}}</td>
-            <td><a href="/delete/{{movie.id}}/">Delete</a>&nbsp;&nbsp;<a href="/deleteall">DeleteAll</a></td>
+            <td><a href="/delete/{{movie.id}}/">Delete</td>
         </tr>
         {%endfor%}
     </table>
     {%else%}
     <p>No movie found</p>
     {%endif%}
+
+    <button></a>&nbsp;&nbsp;<a href="/deleteall">DeleteAll</a></button>
     <a href="/">Home</a>
 </div>
 
