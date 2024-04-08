@@ -22,3 +22,7 @@ def delete_view(request,id):
     print(movie.id)
     movie.delete()
     return redirect('/')
+
+def delete_all_movies(request):
+    Movie.objects.all().delete()
+    return render(request,'testapp/list_movies.html')
