@@ -11,7 +11,7 @@
 <body>
     <div class="container" align="center">
         <h1>Add movie infermation</h1>
-        <form action="/listmovies" method="post">
+        <form  method="post">
             {{form.as_p}}
             {% csrf_token %}
             <input type="submit" class="btn btn-primary" value="AddMovie">
