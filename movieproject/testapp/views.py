@@ -15,7 +15,7 @@ def add_movie_view(request):
         form=MovieForm(request.POST)
         if form.is_valid():
             form.save()
-        return index_view(request)
+        return render(request,'testapp/list_movies.html')
     return render(request,'testapp/addmovie.html',{'form':form})
 def delete_view(request,id):
     movie=Movie.objects.get(id=id)
